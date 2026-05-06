@@ -106,8 +106,8 @@ fun MainScreen(navHostController: NavHostController, modifier: Modifier = Modifi
                 navHostController.navigate(Screen.Match.route
                         + "?teamA=${teamA}"
                         + "&teamB=${teamB}"
-                        + "&golsA=${golsA}"
-                        + "&golsB=${golsB}")
+                        + "&golsA=${golsA.toInt()}"
+                        + "&golsB=${golsB.toInt()}")
             }
         }) {
             Text(text = "Ver Resultado")
