@@ -55,6 +55,40 @@ fun MainNavigator(navHostController: NavHostController, modifier: Modifier) {
                 golsB = it.arguments?.getInt("golsB")?:0
             )
         }
+
+        composable(
+            route = Screen.Result.route + "?teamA={teamA}&teamB={teamB}&golsA={golsA}&golsB={golsB}",
+            arguments = listOf(
+                navArgument(name = "teamA") {
+                    type = NavType.StringType
+                    nullable = false
+                },
+
+                navArgument(name = "teamB") {
+                    type = NavType.StringType
+                    nullable = false
+                },
+
+                navArgument(name = "golsA") {
+                    type = NavType.IntType
+                    nullable = false
+                },
+
+                navArgument(name = "golsB") {
+                    type = NavType.IntType
+                    nullable = false
+                }
+            )
+        ) {
+            FinalResultScreen(
+                navHostController,
+                modifier,
+                teamA = it.arguments?.getString("teamA")?:"",
+                teamB = it.arguments?.getString("teamB")?:"",
+                golsA = it.arguments?.getInt("golsA")?:0,
+                golsB = it.arguments?.getInt("golsB")?:0
+            )
+        }
     }
 }
 
