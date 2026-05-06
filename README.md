@@ -116,5 +116,4 @@ Isso evita que os dados informados pelo usuário sejam perdidos quando a interfa
 ## Autor
 
 Nome: Raul Souza  
-Prontuário: SC3045153  
-Disciplina: Programação para Dispositivos Móveis
+Prontuário: SC3045153
