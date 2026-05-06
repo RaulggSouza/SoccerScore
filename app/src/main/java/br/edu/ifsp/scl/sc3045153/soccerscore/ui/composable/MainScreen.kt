@@ -97,12 +97,14 @@ fun MainScreen(navHostController: NavHostController, modifier: Modifier = Modifi
         )
 
         Button(onClick = {
+            //Valida valores
             teamAError = validateTeamNames(teamA)
             teamBError = validateTeamNames(teamB)
             golsAError = validateTeamGols(golsA)
             golsBError = validateTeamGols(golsB)
 
             if (teamAError == null && teamBError == null && golsAError == null && golsBError == null) {
+                // Passa para a próxima navigation os valores
                 navHostController.navigate(Screen.Match.route
                         + "?teamA=${teamA}"
                         + "&teamB=${teamB}"

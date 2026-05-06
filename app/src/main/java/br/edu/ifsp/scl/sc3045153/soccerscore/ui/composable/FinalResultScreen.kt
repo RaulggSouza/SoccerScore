@@ -34,6 +34,7 @@ fun FinalResultScreen(
     val savedGolsA = rememberSaveable { golsA }
     val savedGolsB = rememberSaveable { golsB }
 
+    //Gera resultado dado o placar
     val resultMessage = getResultMessage(
         teamA = savedTeamA,
         teamB = savedTeamB,
